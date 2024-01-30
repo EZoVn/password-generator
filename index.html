@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="script.js" defer></script>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="border bg-slate-500 p-5 sm:m-10 sm:w-4/5">
+      <h1 class="text-4xl font-bold text-green-900">
+        Generate
+        <span class="border-b-2 border-red-950 pb-2 text-red-950"
+          >password</span
+        >
+      </h1>
+      <div class="mt-10">
+        Lenght
+        <select class="cursor-pointer" name="lenght" id="lenght">
+          <option value="8">8</option>
+          <option value="12">12</option>
+          <option value="16">16</option>
+          <option value="24">24</option>
+          <option value="32">32</option>
+          <option value="64">64</option>
+        </select>
+        <div class="flex flex-col">
+          <label for="lowercase">
+            <input
+              class="cursor-pointer"
+              type="checkbox"
+              name="lowercase"
+              id="lowercase"
+              checked
+            />
+            Lowercase
+          </label>
+          <label for="uppercase">
+            <input
+              class="cursor-pointer"
+              type="checkbox"
+              name="uppercase"
+              id="uppercase"
+            />
+            Uppercase
+          </label>
+          <label for="numbers">
+            <input
+              class="cursor-pointer"
+              type="checkbox"
+              name="numbers"
+              id="numbers"
+            />
+            Numbers
+          </label>
+          <label for="symbols">
+            <input
+              class="cursor-pointer"
+              type="checkbox"
+              name="symbols"
+              id="symbols"
+            />
+            Symbols
+          </label>
+        </div>
+      </div>
+      <div class="mb-7 mt-5 flex w-full items-center rounded text-green-900">
+        <input
+          class="h-full overflow-hidden rounded-sm border-0 p-4 text-sm outline"
+          type="text"
+          id="password"
+          placeholder="Password"
+        />
+        <img
+          onclick="copyPassword()"
+          class="ml-1 w-12 cursor-pointer rounded-r"
+          src="./images/copie.png"
+          alt="copy icon"
+        />
+      </div>
+      <button
+        id="btnGenerate"
+        class="rounded bg-green-900 px-8 py-2 font-bold text-white"
+      >
+        Generate
+      </button>
+    </div>
+  </body>
+</html>
